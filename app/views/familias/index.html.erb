@@ -1,0 +1,26 @@
+<h1>Listing familias</h1>
+
+<table>
+  <tr>
+    <th>Codigo</th>
+    <th>Descripcion</th>
+    <th>Arancel estado</th>
+    <th>Arancel monto</th>
+  </tr>
+
+<% @familias.each do |familia| %>
+  <tr>
+    <td><%=h familia.codigo %></td>
+    <td><%=h familia.descripcion %></td>
+    <td><%=h familia.arancel_estado %></td>
+    <td><%=h familia.arancel_monto %></td>
+    <td><%= link_to 'Show', familia %></td>
+    <td><%= link_to 'Edit', edit_familia_path(familia) %></td>
+    <td><%= link_to 'Destroy', familia, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New familia', new_familia_path %>

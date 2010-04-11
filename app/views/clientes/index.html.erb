@@ -1,0 +1,54 @@
+<h1>Listing clientes</h1>
+
+<table>
+  <tr>
+    <th>Codigo</th>
+    <th>Descripcion</th>
+    <th>Ruc</th>
+    <th>Dni</th>
+    <th>Direccion1</th>
+    <th>Numero</th>
+    <th>Interior</th>
+    <th>Tefl1</th>
+    <th>Telf2</th>
+    <th>Fax</th>
+    <th>E-mail</th>
+    <th>Giro negocio</th>
+    <th>Representante</th>
+    <th>Referencias</th>
+    <th>Nro cuenta</th>
+    <th>Vendedor asignado</th>
+    <th>Limite cred</th>
+    <th>Nota</th>
+  </tr>
+
+<% @clientes.each do |cliente| %>
+  <tr>
+    <td><%=h cliente.codigo %></td>
+    <td><%=h cliente.descripcion %></td>
+    <td><%=h cliente.ruc %></td>
+    <td><%=h cliente.dni %></td>
+    <td><%=h cliente.direccion1 %></td>
+    <td><%=h cliente.numero %></td>
+    <td><%=h cliente.interior %></td>
+    <td><%=h cliente.tefl1 %></td>
+    <td><%=h cliente.telf2 %></td>
+    <td><%=h cliente.fax %></td>
+    <td><%=h cliente.email %></td>
+    <td><%=h cliente.giro_negocio %></td>
+    <td><%=h cliente.representante %></td>
+    <td><%=h cliente.referencias %></td>
+    <td><%=h cliente.nro_cuenta %></td>
+    <td><%=h cliente.vendedor_asignado %></td>
+    <td><%=h cliente.limite_cred %></td>
+    <td><%=h cliente.nota %></td>
+    <td><%= link_to 'Show', cliente %></td>
+    <td><%= link_to 'Edit', edit_cliente_path(cliente) %></td>
+    <td><%= link_to 'Destroy', cliente, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New cliente', new_cliente_path %>

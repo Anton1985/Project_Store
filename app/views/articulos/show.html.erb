@@ -1,0 +1,59 @@
+<p>
+  <b>Codigo:</b>
+  <%=h @articulo.codigo %>
+</p>
+
+<p>
+  <b>Descripcion:</b>
+  <%=h @articulo.descripcion %>
+</p>
+
+<p>
+  <b>Codigo alterno:</b>
+  <%=h @articulo.codigo_alterno %>
+</p>
+
+<p>
+  <b>Marca:</b>
+  <%=h @articulo.marca %>
+</p>
+
+<p>
+  <b>Descrip alternativo:</b>
+  <%=h @articulo.descrip_alternativo %>
+</p>
+
+<p>
+  <b>Coment:</b>
+  <%=h @articulo.coment %>
+</p>
+
+<p>
+  <b>Afecta stock:</b>
+  <%=h @articulo.afecta_stock %>
+</p>
+
+<p>
+  <b>Estado:</b>
+  <%=h @articulo.estado %>
+</p>
+
+<p>
+  <b>Tipo de Articulo:</b>
+  <%=h  @articulo.tipo_articulo.descripcion %>
+</p>
+<p>
+  <b>Unidad de Medida:</b>
+  <%=h @articulo.unid_medida.descripcion %>
+</p>
+<p>
+  <b>Estado:</b>
+  <%=h @articulo.estado %>
+</p>
+<p>
+  <%= image_tag @articulo.screenshot.url %>
+  
+</p>
+
+<%= link_to 'Edit', edit_articulo_path(@articulo) %> |
+<%= link_to 'Back', articulos_path %>

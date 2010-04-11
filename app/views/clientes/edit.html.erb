@@ -1,0 +1,84 @@
+<h1>Editing cliente</h1>
+
+<% form_for(@cliente) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :codigo %><br />
+    <%= f.text_field :codigo %>
+  </p>
+  <p>
+    <%= f.label :descripcion %><br />
+    <%= f.text_field :descripcion %>
+  </p>
+  <p>
+    <%= f.label :ruc %><br />
+    <%= f.text_field :ruc %>
+  </p>
+  <p>
+    <%= f.label :dni %><br />
+    <%= f.text_field :dni %>
+  </p>
+  <p>
+    <%= f.label :direccion1 %><br />
+    <%= f.text_field :direccion1 %>
+  </p>
+  <p>
+    <%= f.label :numero %><br />
+    <%= f.text_field :numero %>
+  </p>
+  <p>
+    <%= f.label :interior %><br />
+    <%= f.text_field :interior %>
+  </p>
+  <p>
+    <%= f.label :tefl1 %><br />
+    <%= f.text_field :tefl1 %>
+  </p>
+  <p>
+    <%= f.label :telf2 %><br />
+    <%= f.text_field :telf2 %>
+  </p>
+  <p>
+    <%= f.label :fax %><br />
+    <%= f.text_field :fax %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :giro_negocio %><br />
+    <%= f.text_field :giro_negocio %>
+  </p>
+  <p>
+    <%= f.label :representante %><br />
+    <%= f.text_field :representante %>
+  </p>
+  <p>
+    <%= f.label :referencias %><br />
+    <%= f.text_field :referencias %>
+  </p>
+  <p>
+    <%= f.label :nro_cuenta %><br />
+    <%= f.text_field :nro_cuenta %>
+  </p>
+  <p>
+    <%= f.label :vendedor_asignado %><br />
+    <%= f.text_field :vendedor_asignado %>
+  </p>
+  <p>
+    <%= f.label :limite_cred %><br />
+    <%= f.text_field :limite_cred %>
+  </p>
+  <p>
+    <%= f.label :nota %><br />
+    <%= f.text_area :nota %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @cliente %> |
+<%= link_to 'Back', clientes_path %>

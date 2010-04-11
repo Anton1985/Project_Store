@@ -1,0 +1,20 @@
+<h1>Editing unid_medida</h1>
+
+<% form_for(@unid_medida) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :codigo %><br />
+    <%= f.text_field :codigo %>
+  </p>
+  <p>
+    <%= f.label :descripcion %><br />
+    <%= f.text_field :descripcion %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @unid_medida %> |
+<%= link_to 'Back', unid_medidas_path %>

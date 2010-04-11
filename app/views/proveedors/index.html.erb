@@ -1,0 +1,54 @@
+<h1>Listing proveedors</h1>
+
+<table>
+  <tr>
+    <th>Codigo</th>
+    <th>Descripcion</th>
+    <th>Descripcion comercial</th>
+    <th>Ruc</th>
+    <th>Dni</th>
+    <th>Direccion1</th>
+    <th>Direccion2</th>
+    <th>Tefl1</th>
+    <th>Telf2</th>
+    <th>Fax</th>
+    <th>E-mail</th>
+    <th>Giro negocio</th>
+    <th>Representante</th>
+    <th>Referencias</th>
+    <th>Nro cuenta</th>
+    <th>Vendedor asignado</th>
+    <th>Limite cred</th>
+    <th>Nota</th>
+  </tr>
+
+<% @proveedors.each do |proveedor| %>
+  <tr>
+    <td><%=h proveedor.codigo %></td>
+    <td><%=h proveedor.descripcion %></td>
+    <td><%=h proveedor.descripcion_comercial %></td>
+    <td><%=h proveedor.ruc %></td>
+    <td><%=h proveedor.dni %></td>
+    <td><%=h proveedor.direccion1 %></td>
+    <td><%=h proveedor.direccion2 %></td>
+    <td><%=h proveedor.tefl1 %></td>
+    <td><%=h proveedor.telf2 %></td>
+    <td><%=h proveedor.fax %></td>
+    <td><%=h proveedor.email %></td>
+    <td><%=h proveedor.giro_negocio %></td>
+    <td><%=h proveedor.representante %></td>
+    <td><%=h proveedor.referencias %></td>
+    <td><%=h proveedor.nro_cuenta %></td>
+    <td><%=h proveedor.vendedor_asignado %></td>
+    <td><%=h proveedor.limite_cred %></td>
+    <td><%=h proveedor.nota %></td>
+    <td><%= link_to 'Show', proveedor %></td>
+    <td><%= link_to 'Edit', edit_proveedor_path(proveedor) %></td>
+    <td><%= link_to 'Destroy', proveedor, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New proveedor', new_proveedor_path %>

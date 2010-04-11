@@ -1,0 +1,22 @@
+<h1>Listing lineas</h1>
+
+<table>
+  <tr>
+    <th>Codigo</th>
+    <th>Descripcion</th>
+  </tr>
+
+<% @lineas.each do |linea| %>
+  <tr>
+    <td><%=h linea.codigo %></td>
+    <td><%=h linea.descripcion %></td>
+    <td><%= link_to 'Show', linea %></td>
+    <td><%= link_to 'Edit', edit_linea_path(linea) %></td>
+    <td><%= link_to 'Destroy', linea, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New linea', new_linea_path %>

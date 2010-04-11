@@ -1,0 +1,27 @@
+<h1>New familia</h1>
+
+<% form_for(@familia) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :codigo %><br />
+    <%= f.text_field :codigo %>
+  </p>
+  <p>
+    <%= f.label :descripcion %><br />
+    <%= f.text_field :descripcion %>
+  </p>
+  <p>
+    <%= f.label :arancel_estado %><br />
+    <%= f.check_box :arancel_estado %>
+  </p>
+  <p>
+    <%= f.label :arancel_monto %><br />
+    <%= f.text_field :arancel_monto %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', familias_path %>

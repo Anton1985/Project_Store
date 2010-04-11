@@ -1,0 +1,23 @@
+<p>
+  <b>Codigo:</b>
+  <%=h @familia.codigo %>
+</p>
+
+<p>
+  <b>Descripcion:</b>
+  <%=h @familia.descripcion %>
+</p>
+
+<p>
+  <b>Arancel estado:</b>
+  <%=h @familia.arancel_estado %>
+</p>
+
+<p>
+  <b>Arancel monto:</b>
+  <%=h @familia.arancel_monto %>
+</p>
+
+
+<%= link_to 'Edit', edit_familia_path(@familia) %> |
+<%= link_to 'Back', familias_path %>

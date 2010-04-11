@@ -1,0 +1,63 @@
+<h1>New vendedor</h1>
+
+<% form_for(@vendedor) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :codigo %><br />
+    <%= f.text_field :codigo %>
+  </p>
+  <p>
+    <%= f.label :descripcion %><br />
+    <%= f.text_field :descripcion %>
+  </p>
+  <p>
+    <%= f.label :ruc %><br />
+    <%= f.text_field :ruc %>
+  </p>
+  <p>
+    <%= f.label :dni %><br />
+    <%= f.text_field :dni %>
+  </p>
+  <p>
+    <%= f.label :direc1 %><br />
+    <%= f.text_field :direc1 %>
+  </p>
+  <p>
+    <%= f.label :direc2 %><br />
+    <%= f.text_field :direc2 %>
+  </p>
+  <p>
+    <%= f.label :telf1 %><br />
+    <%= f.text_field :telf1 %>
+  </p>
+  <p>
+    <%= f.label :telf2 %><br />
+    <%= f.text_field :telf2 %>
+  </p>
+  <p>
+    <%= f.label :fax %><br />
+    <%= f.text_field :fax %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :ref %><br />
+    <%= f.text_field :ref %>
+  </p>
+  <p>
+    <%= f.label :zona_venta %><br />
+    <%= f.text_field :zona_venta %>
+  </p>
+  <p>
+    <%= f.label :notas %><br />
+    <%= f.text_area :notas %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', vendedors_path %>

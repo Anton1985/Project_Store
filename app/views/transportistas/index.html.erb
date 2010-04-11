@@ -1,0 +1,46 @@
+<h1>Listing transportistas</h1>
+
+<table>
+  <tr>
+    <th>Codigo</th>
+    <th>Descripcion</th>
+    <th>Nro incripcion</th>
+    <th>Ruc</th>
+    <th>Dni</th>
+    <th>Nro brevete</th>
+    <th>Direc1</th>
+    <th>Direc2</th>
+    <th>Telf1</th>
+    <th>Telf2</th>
+    <th>Fax</th>
+    <th>Modelo marca</th>
+    <th>Placa</th>
+    <th>Notas</th>
+  </tr>
+
+<% @transportistas.each do |transportista| %>
+  <tr>
+    <td><%=h transportista.codigo %></td>
+    <td><%=h transportista.descripcion %></td>
+    <td><%=h transportista.nro_incripcion %></td>
+    <td><%=h transportista.ruc %></td>
+    <td><%=h transportista.dni %></td>
+    <td><%=h transportista.nro_brevete %></td>
+    <td><%=h transportista.direc1 %></td>
+    <td><%=h transportista.direc2 %></td>
+    <td><%=h transportista.telf1 %></td>
+    <td><%=h transportista.telf2 %></td>
+    <td><%=h transportista.fax %></td>
+    <td><%=h transportista.modelo_marca %></td>
+    <td><%=h transportista.placa %></td>
+    <td><%=h transportista.notas %></td>
+    <td><%= link_to 'Show', transportista %></td>
+    <td><%= link_to 'Edit', edit_transportista_path(transportista) %></td>
+    <td><%= link_to 'Destroy', transportista, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New transportista', new_transportista_path %>

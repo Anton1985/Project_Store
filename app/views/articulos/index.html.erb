@@ -1,0 +1,40 @@
+<h1>Listing articulos</h1>
+
+
+<table border =2>
+  <tr>
+    <th>Codigo</th>
+    <th>Descripcion</th>
+    <th>Codigo alterno</th>
+    <th>Marca</th>
+    <th>Descrip alternativo</th>
+    <th>Coment</th>
+    <th>Afecta stock</th>
+    <th>Estado</th>
+    <th>Tipo Articulo</th>
+    <th>Unid Medida</th>
+  </tr>
+
+<% @articulos.each do |articulo| %>
+  <tr>
+    <td><%=h articulo.codigo %></td>
+    <td><%=h articulo.descripcion %></td>
+    <td><%=h articulo.codigo_alterno %></td>
+    <td><%=h articulo.marca %></td>
+    <td><%=h articulo.descrip_alternativo %></td>
+    <td><%=h articulo.coment %></td>
+    <td><%=h articulo.afecta_stock %></td>
+    <td><%=h articulo.estado%></td>
+   <% debug articulo.tipo_articulo%>
+    <td><%= h articulo.tipo_articulo.descripcion%></td>
+    <td><%= h articulo.unid_medida.descripcion%></td>
+    <td><%= link_to 'Show', articulo %></td>
+    <td><%= link_to 'Edit', edit_articulo_path(articulo) %></td>
+    <td><%= link_to 'Destroy', articulo, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New articulo', new_articulo_path %>

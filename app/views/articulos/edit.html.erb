@@ -1,0 +1,59 @@
+<h1>Editing articulo</h1>
+
+<% form_for(@articulo,:html => { :multipart => true }) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :codigo %><br />
+    <%= f.text_field :codigo %>
+  </p>
+  <p>
+    <%= f.label :descripcion %><br />
+    <%= f.text_field :descripcion %>
+  </p>
+  <p>
+    <%= f.label :codigo_alterno %><br />
+    <%= f.text_field :codigo_alterno %>
+  </p>
+  <p>
+    <%= f.label :marca %><br />
+    <%= f.text_field :marca %>
+  </p>
+  <p>
+    <%= f.label :descrip_alternativo %><br />
+    <%= f.text_field :descrip_alternativo %>
+  </p>
+  <p>
+    <%= f.label :coment %><br />
+    <%= f.text_area :coment %>
+  </p>
+  <p>
+    <%= f.label :afecta_stock %><br />
+    <%= f.check_box :afecta_stock %>
+  </p>
+  <p>
+    <%= f.label :estado %><br />
+    <%= f.check_box :estado %>
+  </p>
+<p>
+   <%= f.label :tipo_articulo%><br />
+    <%= select('articulo','tipo_articulo_id',[["--seleccione--",""]]+@tipo_articulos.collect{|tipo|[tipo.descripcion,tipo.id]} ) %>
+</p>
+
+<p>
+   <%= f.label :unid_medida%><br />
+    <%= select('articulo','unid_medida_id',[["--seleccione--",""]]+@unid_medidas.collect{|medida|[medida.descripcion,medida.id]} ) %>
+</p>
+
+
+<p>
+ <%= f.file_field :screenshot %><br>
+</p>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @articulo %> |
+<%= link_to 'Back', articulos_path %>

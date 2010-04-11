@@ -1,0 +1,13 @@
+<p>
+  <b>Codigo:</b>
+  <%=h @tipo_articulo.codigo %>
+</p>
+
+<p>
+  <b>Descripcion:</b>
+  <%=h @tipo_articulo.descripcion %>
+</p>
+
+
+<%= link_to 'Edit', edit_tipo_articulo_path(@tipo_articulo) %> |
+<%= link_to 'Back', tipo_articulos_path %>

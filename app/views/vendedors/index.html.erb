@@ -1,0 +1,44 @@
+<h1>Listing vendedors</h1>
+
+<table>
+  <tr>
+    <th>Codigo</th>
+    <th>Descripcion</th>
+    <th>Ruc</th>
+    <th>Dni</th>
+    <th>Direc1</th>
+    <th>Direc2</th>
+    <th>Telf1</th>
+    <th>Telf2</th>
+    <th>Fax</th>
+    <th>Email</th>
+    <th>Ref</th>
+    <th>Zona venta</th>
+    <th>Notas</th>
+  </tr>
+
+<% @vendedors.each do |vendedor| %>
+  <tr>
+    <td><%=h vendedor.codigo %></td>
+    <td><%=h vendedor.descripcion %></td>
+    <td><%=h vendedor.ruc %></td>
+    <td><%=h vendedor.dni %></td>
+    <td><%=h vendedor.direc1 %></td>
+    <td><%=h vendedor.direc2 %></td>
+    <td><%=h vendedor.telf1 %></td>
+    <td><%=h vendedor.telf2 %></td>
+    <td><%=h vendedor.fax %></td>
+    <td><%=h vendedor.email %></td>
+    <td><%=h vendedor.ref %></td>
+    <td><%=h vendedor.zona_venta %></td>
+    <td><%=h vendedor.notas %></td>
+    <td><%= link_to 'Show', vendedor %></td>
+    <td><%= link_to 'Edit', edit_vendedor_path(vendedor) %></td>
+    <td><%= link_to 'Destroy', vendedor, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New vendedor', new_vendedor_path %>

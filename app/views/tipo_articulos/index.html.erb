@@ -1,0 +1,22 @@
+<h1>Listing tipo_articulos</h1>
+
+<table>
+  <tr>
+    <th>Codigo</th>
+    <th>Descripcion</th>
+  </tr>
+
+<% @tipo_articulos.each do |tipo_articulo| %>
+  <tr>
+    <td><%=h tipo_articulo.codigo %></td>
+    <td><%=h tipo_articulo.descripcion %></td>
+    <td><%= link_to 'Show', tipo_articulo %></td>
+    <td><%= link_to 'Edit', edit_tipo_articulo_path(tipo_articulo) %></td>
+    <td><%= link_to 'Destroy', tipo_articulo, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New tipo_articulo', new_tipo_articulo_path %>

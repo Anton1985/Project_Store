@@ -1,0 +1,68 @@
+<h1>Editing transportista</h1>
+
+<% form_for(@transportista) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :codigo %><br />
+    <%= f.text_field :codigo %>
+  </p>
+  <p>
+    <%= f.label :descripcion %><br />
+    <%= f.text_field :descripcion %>
+  </p>
+  <p>
+    <%= f.label :nro_incripcion %><br />
+    <%= f.text_field :nro_incripcion %>
+  </p>
+  <p>
+    <%= f.label :ruc %><br />
+    <%= f.text_field :ruc %>
+  </p>
+  <p>
+    <%= f.label :dni %><br />
+    <%= f.text_field :dni %>
+  </p>
+  <p>
+    <%= f.label :nro_brevete %><br />
+    <%= f.text_field :nro_brevete %>
+  </p>
+  <p>
+    <%= f.label :direc1 %><br />
+    <%= f.text_field :direc1 %>
+  </p>
+  <p>
+    <%= f.label :direc2 %><br />
+    <%= f.text_field :direc2 %>
+  </p>
+  <p>
+    <%= f.label :telf1 %><br />
+    <%= f.text_field :telf1 %>
+  </p>
+  <p>
+    <%= f.label :telf2 %><br />
+    <%= f.text_field :telf2 %>
+  </p>
+  <p>
+    <%= f.label :fax %><br />
+    <%= f.text_field :fax %>
+  </p>
+  <p>
+    <%= f.label :modelo_marca %><br />
+    <%= f.text_field :modelo_marca %>
+  </p>
+  <p>
+    <%= f.label :placa %><br />
+    <%= f.text_field :placa %>
+  </p>
+  <p>
+    <%= f.label :notas %><br />
+    <%= f.text_area :notas %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @transportista %> |
+<%= link_to 'Back', transportistas_path %>

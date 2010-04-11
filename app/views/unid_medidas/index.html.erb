@@ -1,0 +1,22 @@
+<h1>Listing unid_medidas</h1>
+
+<table>
+  <tr>
+    <th>Codigo</th>
+    <th>Descripcion</th>
+  </tr>
+
+<% @unid_medidas.each do |unid_medida| %>
+  <tr>
+    <td><%=h unid_medida.codigo %></td>
+    <td><%=h unid_medida.descripcion %></td>
+    <td><%= link_to 'Show', unid_medida %></td>
+    <td><%= link_to 'Edit', edit_unid_medida_path(unid_medida) %></td>
+    <td><%= link_to 'Destroy', unid_medida, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New unid_medida', new_unid_medida_path %>
